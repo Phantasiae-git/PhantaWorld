@@ -1,0 +1,63 @@
+/* Full-viewport background image */
+.background-image-container {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    background-image: url("../assets/images/header.jpg"); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Keeps the image fixed while scrolling */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Align content to the bottom */
+  padding-bottom: 300px;
+  }
+  
+  /* Centered content (button) */
+  .content {
+    text-align: center;
+  }
+  
+  /* Let's Start button */
+  .start-button {
+    padding: 0; /* Remove padding */
+    width: 100px; /* Set a fixed width */
+    height: 100px; /* Set a fixed height (same as width) */
+    font-size: 1.2rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+    border: none;
+    border-radius: 50%; /* Make it a circle */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .start-button:hover {
+    background-color: rgba(0, 0, 0, 0.9); /* Darker on hover */
+  }
+  
+  /* Beige section */
+  .beige-section {
+    padding: 50px;
+    background-color: beige;
+    text-align: center;
+    min-height: 50vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .beige-section h2 {
+    margin-bottom: 35px;
+    font-size: 3.5rem;
+    color: #333;
+  }
+  
+  .beige-section p {
+    font-size: 1.5rem;
+    color: #555;
+  }
