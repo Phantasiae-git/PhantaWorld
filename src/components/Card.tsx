@@ -1,4 +1,5 @@
 import React, { ReactNode } from "react";
+import "./Card.css";
 
 interface Props {
   mediaPath: string; // Path to the image or video
@@ -15,15 +16,17 @@ const Card = ({ mediaPath, mediaType, children, text, page }: Props) => {
 
   return (
     <div className="card" style={styles}>
-      {/* Conditionally render image or video */}
-      {mediaType === "image" ? (
-        <img src={mediaPath} className="card-img-top" alt="..." />
-      ) : (
-        <video className="card-img-top" controls>
-          <source src={mediaPath} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      )}
+      {/* Image/Video Container */}
+      <div className="media-container">
+        {mediaType === "image" ? (
+          <img src={mediaPath} className="card-img-top" alt="..." />
+        ) : (
+          <video className="card-img-top" controls>
+            <source src={mediaPath} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        )}
+      </div>
 
       <div className="card-body">
         <h5 className="card-title">{children}</h5>

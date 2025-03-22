@@ -7,9 +7,9 @@ import "react-multi-carousel/lib/styles.css";
 import Card from "./components/Card";
 import { isMobile, isTablet } from "react-device-detect";
 import BackgroundImageSection from "./components/BackgroundImageSection";
+import artcomms from "./assets/images/artComms.png";
 
 function App() {
-
   const deviceType = isMobile ? "mobile" : isTablet ? "tablet" : "desktop";
 
   const responsive = {
@@ -30,11 +30,9 @@ function App() {
     },
   };
 
-  
-
   const [alert, setAlert] = useState(false);
   return (
-    <div >
+    <div>
       {/* <Button
         onClick={() => {
           setAlert(true);
@@ -52,10 +50,10 @@ function App() {
         </Alert>
       )} */}
       <Navbar />
-      <BackgroundImageSection/>
+      <BackgroundImageSection />
       <Carousel
-        swipeable={false}
-        draggable={false}
+        swipeable={true}
+        draggable={true}
         responsive={responsive}
         ssr={true} // means to render carousel on server-side.
         infinite={true}
@@ -76,7 +74,28 @@ function App() {
         >
           Photography
         </Card>
-        <Card mediaPath="../assets/img/photo.png" mediaType="image" text="yaaaaaaa" page="/art">
+        <Card
+          mediaPath={artcomms}
+          mediaType="image"
+          text="yaaaaaaa"
+          page="/art"
+        >
+          Art Commissions 1
+        </Card>
+        <Card
+          mediaPath="../assets/img/photo.png"
+          mediaType="image"
+          text="olaolaola"
+          page="/photography"
+        >
+          Photography
+        </Card>
+        <Card
+          mediaPath="../assets/img/photo.png"
+          mediaType="image"
+          text="yaaaaaaa"
+          page="/art"
+        >
           Art Commissions
         </Card>
         <Card
@@ -87,22 +106,12 @@ function App() {
         >
           Photography
         </Card>
-        <Card mediaPath="../assets/img/photo.png"
-        mediaType="image"
-        text="yaaaaaaa" page="/art">
-          Art Commissions
-        </Card>
         <Card
           mediaPath="../assets/img/photo.png"
           mediaType="image"
-          text="olaolaola"
-          page="/photography"
+          text="yaaaaaaa"
+          page="/art"
         >
-          Photography
-        </Card>
-        <Card mediaPath="../assets/img/photo.png"
-        mediaType="image"
-        text="yaaaaaaa" page="/art">
           Art Commissions
         </Card>
       </Carousel>

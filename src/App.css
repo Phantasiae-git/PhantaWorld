@@ -1,0 +1,52 @@
+@font-face {
+    font-family: "akira";
+    src: url("./assets/fonts/Akira-Expanded-Demo.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2rem;
+  }
+
+  @font-face {
+    font-family: "lemonmilk";
+    src: url("./assets/fonts/LEMONMILK-Regular.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "lemonmilkmed";
+    src: url("./assets/fonts/LEMONMILK-Medium.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "poppins";
+    src: url("./assets/fonts/Poppins-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+
+  @font-face {
+    font-family: "tbf";
+    src: url("./assets/fonts/THEBOLDFONT-FREEVERSION.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "bebas";
+    src: url("./assets/fonts/BebasNeue-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2rem;
+  }
+
+  p {
+    font-family: "poppins", sans-serif;
+  }
+
+  h2{
+    font-family: "akira", sans-serif;
+  }
