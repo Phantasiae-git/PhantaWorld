@@ -53,3 +53,13 @@ export const services: Array<{
       page: "/photography",
     },
   ];
+
+  export const catOrder = ["video", "art", "hair", "photo"];
+
+  export const groupedServices = services.reduce((cat, service) => {
+    if (!cat[service.category]) {
+      cat[service.category] = [];
+    }
+    cat[service.category].push(service);
+    return cat;
+  }, {} as Record<string, typeof services>);

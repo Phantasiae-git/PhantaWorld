@@ -1,6 +1,8 @@
-import React from 'react'
+import React, {Fragment} from 'react'
 import { Link } from "react-router-dom";
 import "./Navbar.css"
+import { groupedServices, catOrder } from "../services";
+import { Category } from '@mui/icons-material';
 
 interface Service {
   name: string;
@@ -37,13 +39,24 @@ const Navbar = ({ services }: NavbarProps) => {
                 Services 🔨
               </a>
               <ul className="dropdown-menu">
-              {services.map((service, index) => (
-                  <li key={index}>
-                    <Link className="dropdown-item" to={service.page}>
+              {catOrder.map((category)=>(
+                <Fragment key={category}>
+                  {groupedServices[category].map((service, index) => (
+                    <li key={index}>
+                      <Link className="dropdown-item" to={service.page}>
                       {service.name}
-                    </Link>
-                  </li>
-                ))}
+                      </Link>
+                    </li>
+                  ))}
+                  {category!==catOrder[catOrder.length-1] && (
+                    <li><hr className="dropdown-divider" /></li>
+                  )
+
+                  }
+                </Fragment>
+              )
+
+              )}
               </ul>
             </li>
             <li className="nav-item">
