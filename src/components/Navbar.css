@@ -41,10 +41,11 @@ z-index: -1; /* Place the gradient behind the navbar content */
   .navbar-nav .nav-link.active,
   .nav-link {
     font-family: "tbf", sans-serif;
-    color: rgba(252, 245, 245, 0.932) !important;
+    color: rgba(241, 241, 250, 0.932) !important;
     white-space: nowrap; /* Prevent text from wrapping */
   overflow: hidden; /* Hide overflow text */
   text-overflow: ellipsis;
+  letter-spacing: 0.02rem;
   }
   
   /* Center the navbar content */
@@ -64,7 +65,7 @@ z-index: -1; /* Place the gradient behind the navbar content */
 @media (min-width: 992px) {
     .navbar-expand-lg .navbar-nav {
       flex-direction: row;
-      width: 123%;
+      width: 160%;
     display: flex;
     justify-content: center;
     }
@@ -75,11 +76,11 @@ z-index: -1; /* Place the gradient behind the navbar content */
     }
   }
 
-li{
-    padding-right: 0.5rem;
-        padding-left: 0.5rem;
+nav li{
+    padding-right: 0.7rem;
+        padding-left: 0.7rem;
 }
 
 .nav-link{
-    font-size: 1.1rem !important;
+    font-size: 1.2rem !important;
 }

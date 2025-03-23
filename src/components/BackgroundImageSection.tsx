@@ -1,8 +1,8 @@
 import React from "react";
-import "./BackgroundImageSection.css"; // Import the CSS file for styling
+import "./BackgroundImageSection.css";
 
 const BackgroundImageSection: React.FC = () => {
-  // Function to handle the button click and scroll down
+
   const handleScrollDown = () => {
     const section = document.getElementById("beige-section");
     if (section) {
@@ -12,7 +12,6 @@ const BackgroundImageSection: React.FC = () => {
 
   return (
     <div>
-      {/* Full-viewport background image section */}
       <div className="background-image-container">
         <div className="content">
           <button className="start-button" onClick={handleScrollDown}>
@@ -21,9 +20,8 @@ const BackgroundImageSection: React.FC = () => {
         </div>
       </div>
 
-      {/* Beige section with text */}
       <div id="beige-section" className="beige-section">
-        <h2><strong>Phanta's</strong> everything website</h2>
+        <h2><strong>PHANTA'S</strong> EVERYTHING WEBSITE</h2>
         <p>
         All you could ever want from yours truly.
 <br/>

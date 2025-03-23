@@ -1,39 +1,44 @@
 import React, { ReactNode } from "react";
+import { Link } from "react-router-dom";
+import ReactPlayer from "react-player";
 import "./Card.css";
 
-interface Props {
-  mediaPath: string; // Path to the image or video
-  mediaType: "image" | "video"; // Specify whether it's an image or video
+interface CardProps {
+  mediaPath: string;
+  mediaType: "image" | "video";
   children: ReactNode;
   text: string;
   page: string;
 }
 
-const Card = ({ mediaPath, mediaType, children, text, page }: Props) => {
+const Card = ({ mediaPath, mediaType, children, text, page }: CardProps) => {
   const styles = {
     width: "20rem",
   };
 
   return (
     <div className="card" style={styles}>
-      {/* Image/Video Container */}
       <div className="media-container">
         {mediaType === "image" ? (
           <img src={mediaPath} className="card-img-top" alt="..." />
         ) : (
-          <video className="card-img-top" controls>
-            <source src={mediaPath} type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+          <ReactPlayer
+            url={mediaPath}
+            playing
+            loop
+            muted
+            width="100%"
+            height="auto"
+          />
         )}
       </div>
 
       <div className="card-body">
         <h5 className="card-title">{children}</h5>
         <p className="card-text">{text}</p>
-        <a href={page} className="btn btn-primary">
+        <Link to={page} className="btn btn-primary">
           Explore {children}
-        </a>
+        </Link>
       </div>
     </div>
   );

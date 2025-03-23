@@ -1,7 +1,17 @@
 import React from 'react'
+import { Link } from "react-router-dom";
 import "./Navbar.css"
 
-const Navbar = () => {
+interface Service {
+  name: string;
+  page: string;
+}
+
+interface NavbarProps {
+  services: Service[];
+}
+
+const Navbar = ({ services }: NavbarProps) => {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary" id="nav">
   <div className="container-fluid">
@@ -11,30 +21,46 @@ const Navbar = () => {
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <div className="nav-stripe"></div>
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-        <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="#">Home 🏡</a>
-        </li>
-        <li className="nav-item dropdown">
-          <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          Services 🔨
-          </a>
-          <ul className="dropdown-menu">
-            <li><a className="dropdown-item" href="#">Action</a></li>
-            <li><a className="dropdown-item" href="#">Another action</a></li>
-            <li><hr className="dropdown-divider" /></li>
-            <li><a className="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        
-        <li className="nav-item">
-          <a className="nav-link" href="#">About me 👤</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#">All reviews ⭐</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#">Contacts ☎️</a>
-        </li>
+      <li className="nav-item">
+              <Link className="nav-link active" aria-current="page" to="/">
+                Home 🏡
+              </Link>
+            </li>
+            <li className="nav-item dropdown">
+              <a
+                className="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Services 🔨
+              </a>
+              <ul className="dropdown-menu">
+              {services.map((service, index) => (
+                  <li key={index}>
+                    <Link className="dropdown-item" to={service.page}>
+                      {service.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/about">
+                About me 👤
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/reviews">
+                All reviews ⭐
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/contacts">
+                Contacts ☎️
+              </Link>
+            </li>
       </ul>
       <div className="nav-stripe"></div>
     </div>
@@ -42,5 +68,7 @@ const Navbar = () => {
 </nav>
   )
 }
+
+{/* <li><hr className="dropdown-divider" /></li> */}
 
 export default Navbar

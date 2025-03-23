@@ -6,7 +6,7 @@
     overflow: hidden; /* Crop the content */
   }
   
-  /* Image/Video inside the container */
+ 
   .media-container img,
   .media-container video {
     position: absolute;
@@ -16,3 +16,10 @@
     height: 100%;
     object-fit: cover; /* Crop and center the image/video */
   }
+
+  .card {
+	width: 28rem !important;
+  max-width: 98%;
+	padding: 0.5rem !important;
+	border-radius: 0.5rem !important;
+}
