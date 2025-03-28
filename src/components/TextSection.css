@@ -1,0 +1,22 @@
+  /* Beige section */
+  .beige-section {
+    padding: 30px 100px 20px;
+    background-color: rgb(247, 240, 237);
+    text-align: center;
+    min-height: 20vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .beige-section h2 {
+    margin-bottom: 35px;
+    font-size: 3.5rem;
+    color: #333;
+  }
+  
+  .beige-section p {
+    font-size: 1.5rem;
+    color: #555;
+  }

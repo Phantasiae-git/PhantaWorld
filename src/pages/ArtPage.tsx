@@ -1,9 +1,17 @@
-import React from 'react'
+import React from "react";
+import TopSection from "../components/TopSection";
+import TextSection from "../components/TextSection";
 
-const ArtPage = () => {
-  return (
-    <div>ArtPage</div>
-  )
+interface Service {
+  name: string;
+  shortDescription: string;
+  longDescription: string;
+  mediaPath: string;
+  mediaType: "image" | "video";
 }
 
-export default ArtPage
+const ArtPage = ({ service }: { service: Service }) => {
+  return <div>art</div>;
+};
+
+export default ArtPage;

@@ -20,15 +20,16 @@ const Card = ({ mediaPath, mediaType, children, text, page }: CardProps) => {
     <div className="card" style={styles}>
       <div className="media-container">
         {mediaType === "image" ? (
-          <img src={mediaPath} className="card-img-top" alt="..." />
+          <img src={mediaPath} loading="lazy" className="card-img-top" alt="..." />
         ) : (
           <ReactPlayer
             url={mediaPath}
-            playing
+            playing={true}
             loop
             muted
+            pip={false}
             width="100%"
-            height="auto"
+            height="100%"
           />
         )}
       </div>

@@ -1,0 +1,15 @@
+/* Full-viewport background image */
+.background-image-container {
+    position: relative;
+    height: 10vh; /* Full viewport height */
+    background-image: url("../assets/images/header.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Keeps the image fixed while scrolling */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Align content to the bottom */
+  padding-bottom: 300px;
+  }
+  
+

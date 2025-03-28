@@ -1,6 +1,6 @@
 @font-face {
-    font-family: "akira";
-    src: url("./assets/fonts/Akira-Expanded-Demo.otf") format("opentype");
+    font-family: "prata";
+    src: url("./assets/fonts/Prata-Regular.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
     font-size: 2rem;
@@ -65,14 +65,27 @@
   }
 
   h2{
-    font-family: "akira", sans-serif;
+    font-family: "archivo", sans-serif;
+    transform: scaleX(1.3);
+    display: inline-block;
+    letter-spacing: -3px;
+    text-transform: uppercase;
+  }
 
+  h3{
+    font-family: "archivo", sans-serif;
+    transform: scaleX(1.3);
+    display: inline-block;
+    letter-spacing: -2px;
+    text-transform: uppercase;
   }
 
 h5{
-    font-family: "desire", sans-serif;
+    font-family: "Prata", sans-serif;
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 2.5rem;
+    transform: scaleX(0.8);
+    display: inline-block;
   }
 
 
@@ -101,10 +114,78 @@ h5{
     --bs-btn-hover-border-color: #060708;
     --bs-btn-focus-shadow-rgb: 49, 132, 253;
     --bs-btn-active-color: #fff;
-    --bs-btn-active-bg: #0a58ca;
-    --bs-btn-active-border-color: #0a53be;
+    --bs-btn-active-bg: #571e34;
+    --bs-btn-active-border-color: #453492;
     --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
     --bs-btn-disabled-color: #fff;
     --bs-btn-disabled-bg: #0d6efd;
     --bs-btn-disabled-border-color: #0d6efd;
+  }
+
+  .pill-link-button {
+    cursor: pointer;
+    min-width: 182px;
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    border-radius: 9999px; /* Creates pill shape */
+    color: rgb(105, 94, 96);
+    font-family: "poppins";
+    font-size: 1.3rem;
+    text-decoration: none;
+    border: 1px solid transparent;
+    background-image: radial-gradient(circle, rgba(174,179,242,0) 0%, rgba(255,169,186,0) 100%);
+    background-clip: padding-box;
+    position: relative;
+    transition: all 0.4s ease-out;
+    /* Gradient border using pseudo-element */
+    position: relative;
+  }
+  
+  .pill-link-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 9999px;
+    padding: 3px; /* This creates the border */
+    background: radial-gradient(circle, rgba(174,179,242,97) 0%, rgba(255,169,186,97) 100%);
+    -webkit-mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+  
+  .pill-link-button:hover {
+    background-image: radial-gradient(circle, rgba(174,179,242,97) 0%, rgba(255,169,186,97) 100%);
+    color: white;
+  }
+  
+  .pill-link-button:hover::before {
+    opacity: 0;
+  }
+
+  .contain{
+    display: flex;
+    justify-content: space-between; /* Evenly spaces the buttons */
+    align-items: center; /* Vertically centers the buttons */
+    gap: 1rem; /* Minimum space between buttons */
+    max-width: 70%; /* Adjust based on your layout */
+    margin: 0 auto; /* Centers the container */
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+
+  .contain2{
+    display: flex;
+    justify-content: center; /* Evenly spaces the buttons */
+    align-items: center; /* Vertically centers the buttons */
+    gap: 1rem; /* Minimum space between buttons */
+    max-width: 70%; /* Adjust based on your layout */
+    margin: 0 auto; /* Centers the container */
+    padding: 1rem;
+    margin-top: 1rem;
   }

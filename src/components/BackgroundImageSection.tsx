@@ -1,5 +1,6 @@
 import React from "react";
 import "./BackgroundImageSection.css";
+import "./TextSection.css"
 
 const BackgroundImageSection: React.FC = () => {
 
@@ -12,7 +13,7 @@ const BackgroundImageSection: React.FC = () => {
 
   return (
     <div>
-      <div className="background-image-container">
+      <div className="background-image-container1">
         <div className="content">
           <button className="start-button" onClick={handleScrollDown}>
             Start
@@ -20,7 +21,7 @@ const BackgroundImageSection: React.FC = () => {
         </div>
       </div>
 
-      <div id="beige-section" className="beige-section">
+      <div id="beige-section" className="beige-section" style={{paddingTop:'100px', paddingBottom:'70px'}}>
         <h2><strong>PHANTA'S</strong> EVERYTHING WEBSITE</h2>
         <p>
         All you could ever want from yours truly.

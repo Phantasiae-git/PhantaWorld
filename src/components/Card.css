@@ -23,3 +23,9 @@
 	padding: 0.5rem !important;
 	border-radius: 0.5rem !important;
 }
+
+.card-title{
+  display: flex;
+  justify-content: flex-start;
+  margin-left: -2.8rem;
+}

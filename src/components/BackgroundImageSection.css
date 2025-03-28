@@ -1,8 +1,8 @@
 /* Full-viewport background image */
-.background-image-container {
+.background-image-container1 {
     position: relative;
     height: 100vh; /* Full viewport height */
-    background-image: url("../assets/images/header.jpg");
+    background-image: url("../assets/images/header.png");
     background-size: cover;
     background-position: center;
     background-attachment: fixed; /* Keeps the image fixed while scrolling */
@@ -24,7 +24,7 @@
     height: 100px; /* Set a fixed height (same as width) */
     font-size: 1.2rem;
     color: white;
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+    background-color: hsla(330, 73.91%, 9.02%, 0.648); /* Semi-transparent black */
     border: none;
     border-radius: 50%; /* Make it a circle */
     cursor: pointer;
@@ -38,20 +38,9 @@
   }
   
   .start-button:hover {
-    background-color: rgba(0, 0, 0, 0.9); /* Darker on hover */
+    background-color: hsl(330, 73.91%, 9.02%); /* Darker on hover */
   }
   
-  /* Beige section */
-  .beige-section {
-    padding: 50px;
-    background-color: rgb(247, 240, 237);
-    text-align: center;
-    min-height: 50vh; /* Full viewport height */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
   
   .beige-section h2 {
     margin-bottom: 35px;
