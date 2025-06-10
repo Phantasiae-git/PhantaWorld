@@ -35,7 +35,7 @@ const Layout = ({ services }: LayoutProps) => {
       )}
       <Outlet />
       {currentService && <LetsGet />}
-      <Footer relatedServices={['Art Comissions', 'Edits', 'Video Editing']}/>
+      <Footer />
     </div>
   );
 };

@@ -9,7 +9,7 @@ const NotFoundPage = () => {
       <TopSection />
       <TextSection title="404 NOT FOUND" type="rn">
         <p>The page you're looking for doesn't seem to exist, or maybe it's still
-        in construction? Anyways, click the below button to go back home:</p>
+        under construction? Anyways, click the below button to go back home:</p>
         <div className="contain2">
           <Link to="/" className="pill-link-button">
             Home

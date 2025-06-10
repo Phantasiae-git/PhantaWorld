@@ -1,0 +1,24 @@
+.left {
+    width: 40%;
+    max-height: 500px;
+}
+
+.right{
+    width: 60%;
+    display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.divide{
+    padding-top: 5rem;
+    display: flex;
+}
+
+.media-wrapper2 {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-height: 100%;
+  }

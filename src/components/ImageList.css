@@ -1,0 +1,153 @@
+.image-list-container {
+    width: 100%;
+    max-width: 1400px; /* Increased max width */
+    margin: 0 auto;
+  }
+  
+  .image-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px; /* Reduced gap */
+  }
+  
+  .image-item {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .image-wrapper {
+    width: 100%;
+    height: 0;
+    padding-bottom: 120%; /* Adjust based on your typical image ratio */
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 12px;
+  }
+  
+  .list-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover ;
+    transition: transform 0.3s ease;
+    border-radius: 8px;
+  }
+  
+  .list-image:hover {
+    transform: scale(1.03);
+  }
+  
+  .image-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 15px 0;
+    text-align: center;
+    color: #333;
+    letter-spacing: -1.5px;
+  }
+  
+  .item-list {
+    width: 100%;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    min-height: 120px; /* Ensure consistent height */
+  }
+  
+  .list-item {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 1rem;
+    text-align: center;
+    font-family: poppins;
+  }
+  
+  .list-item:last-child {
+    border-bottom: none;
+  }
+
+  
+ 
+  
+  /* Responsive adjustments */
+  @media (max-width: 1200px) {
+    .image-row {
+      gap: 10px;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .image-wrapper {
+      padding-bottom: 100%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .image-row {
+      flex-wrap: wrap;
+    }
+    
+    .image-item {
+      flex: 0 0 calc(33.33% - 10px);
+    }
+    
+    .image-wrapper {
+      padding-bottom: 120%;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .image-item {
+      flex: 0 0 calc(50% - 10px);
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .image-item {
+      flex: 0 0 100%;
+    }
+  }
+
+  
+  .image-wrapper {
+    position: relative;
+  }
+  
+  .image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.3s ease;
+    font-family: poppins;
+    font-size: 0.9rem;
+    white-space: pre-line;
+    text-align: center;
+  }
+  
+  .image-wrapper:hover .image-overlay {
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 1;
+  }
+
+  .list-image1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover ;
+    transition: transform 0.3s ease;
+  }

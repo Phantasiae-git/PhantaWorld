@@ -6,16 +6,20 @@ interface Props {
   title?: string;
   type?: "rn";
   style?:CSSProperties;
+  fontstyle?:CSSProperties;
+  titlestyle?:CSSProperties;
+  h5?:boolean;
 }
 
-const TextSection = ({ children, title, type, style }: Props) => {
+const TextSection = ({ children, title, type, style, fontstyle, titlestyle, h5 }: Props) => {
   return (
     <div id="beige-section" className="beige-section" style={style}>
-        {title && <h2>{title}</h2>}
+        {title && !h5 && <h2 style={titlestyle}>{title}</h2>}
+        {title && h5 && <h5 style={titlestyle}>{title}</h5>}
         {type === "rn" ? (
                   children
                 ) : (
-                  <p>
+                  <p style={fontstyle}>
         {children}
         </p>
                 )}

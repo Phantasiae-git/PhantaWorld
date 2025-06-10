@@ -68,32 +68,35 @@ const EditsPage = () => {
       <MediaContainer
         mediaItems={[
           {
-            path: "src/assets/video/she-a-rock.mp4",
+            path: "src/assets/video/webm/she-a-rock.webm",
             type: "video",
-            title: "Manga style",
+            title: "Manga style - 19,99",
             note: "Focuses on storytelling with manga panels and 3d transitions, can also have animations",
             link: "https://www.instagram.com/p/DGs_-rltPd0/",
+            aspectRatio: "square",
           },
           {
             path: "src/assets/video/webm/arcane.webm",
             type: "video",
-            title: "Simple style",
+            title: "Simple style - 6,99",
             note: "A classic, minimalistic style that prioritizes clip selection, aesthetic and coloring",
             link: "https://www.instagram.com/p/CWyd86EqUeb/",
+            aspectRatio: "square",
           },
           {
-            path: "src/assets/video/shinobu.mp4",
+            path: "src/assets/video/webm/shinobu.webm",
             type: "video",
-            title: "3D candy style",
+            title: "3D candy style - 14,99",
             note: "A creative and colorful style with 3D shapes and typography, with lots of camera movement",
             link: "https://www.instagram.com/p/Cb0ERT_I7M8/",
+            aspectRatio: "square",
           },
         ]}
       />
       <TextSection>
         I can also do more niche styles like glitch and flow, if you wish for a
         commission in that style please contact me about it since the prices can
-        vary a lot more
+        vary :)
       </TextSection>
       <Carousel
         swipeable={true}

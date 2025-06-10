@@ -45,7 +45,7 @@ z-index: -1; /* Place the gradient behind the navbar content */
     white-space: nowrap; /* Prevent text from wrapping */
   overflow: hidden; /* Hide overflow text */
   text-overflow: ellipsis;
-  letter-spacing: 0.02rem;
+  letter-spacing: 0.05rem;
   }
   
   /* Center the navbar content */

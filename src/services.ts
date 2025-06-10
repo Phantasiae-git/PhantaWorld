@@ -22,7 +22,7 @@ export const services: Array<{
     name: "Art Commissions",
     shortDescription:
       "Digital art commissions from sketch to full render. Choose between several different artstyles",
-    longDescription: "Detailed description of the art commissions service...",
+    longDescription: "As seen on @phanta_art!",
     category: "art",
     mediaPath: "src/assets/images/rei.png",
     mediaType: "image",
@@ -32,7 +32,7 @@ export const services: Array<{
     name: "Video Editing",
     shortDescription:
       "Video editing commissions from motion graphics to visualizers, trailers, etc.",
-    longDescription: "Detailed description of the video editing service...",
+    longDescription: "Want me to make a visualizer for your music, a meme with your friends' faces, a trailer for your project, edit your plays or literally anything else that envolves moving pixels? You're in the right place",
     category: "video",
     mediaPath: "/src/assets/video/42cut.mp4",
     mediaType: "video",
@@ -42,9 +42,9 @@ export const services: Array<{
     name: "Hair Dying",
     shortDescription:
       "Hairdresser is in the house! Set a date and pick some colors",
-    longDescription: "Detailed description of the hair dying service...",
+    longDescription: "Vibrant to pastel, simple solid to complicated highlights and splits, i'm the expert",
     category: "hair",
-    mediaPath: "src/assets/images/rainbow hair square.png",
+    mediaPath: "src/assets/images/bea.jpg",
     mediaType: "image",
     page: "/hairdying",
   },
@@ -81,7 +81,7 @@ export const services: Array<{
     name: "Pixel Art",
     shortDescription:
       "Pixel art commissions that can range from sprites to backgrounds to full animations",
-    longDescription: "Detailed description of the pixel art service...",
+    longDescription: "Cute and cheap pixel art icons, sprites, backgrounds, and anything else you want!",
     category: "art",
     mediaPath: "src/assets/images/misato.png",
     mediaType: "image",
@@ -99,7 +99,7 @@ export const services: Array<{
   },
 ];
 
-export const catOrder = ["video", "art", "hair", "photo"];
+export const catOrder = ["video", "art", "hair", "photo", "3D", "beauty"];
 
 export const groupedServices = services.reduce((cat, service) => {
   if (!cat[service.category]) {

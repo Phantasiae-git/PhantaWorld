@@ -29,3 +29,16 @@
   justify-content: flex-start;
   margin-left: -2.8rem;
 }
+
+.card-body{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.fix{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+

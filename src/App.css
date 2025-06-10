@@ -173,7 +173,7 @@ h5{
     justify-content: space-between; /* Evenly spaces the buttons */
     align-items: center; /* Vertically centers the buttons */
     gap: 1rem; /* Minimum space between buttons */
-    max-width: 70%; /* Adjust based on your layout */
+    max-width: 85%; /* Adjust based on your layout */
     margin: 0 auto; /* Centers the container */
     padding: 1rem;
     margin-top: 1rem;

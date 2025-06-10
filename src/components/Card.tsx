@@ -6,9 +6,9 @@ import "./Card.css";
 interface CardProps {
   mediaPath: string;
   mediaType: "image" | "video";
-  children: ReactNode;
-  text: string;
-  page: string;
+  children?: ReactNode;
+  text?: string;
+  page?: string;
 }
 
 const Card = ({ mediaPath, mediaType, children, text, page }: CardProps) => {
@@ -35,11 +35,13 @@ const Card = ({ mediaPath, mediaType, children, text, page }: CardProps) => {
       </div>
 
       <div className="card-body">
-        <h5 className="card-title">{children}</h5>
-        <p className="card-text">{text}</p>
-        <Link to={page} className="btn btn-primary">
+        {children && <h5 className="card-title">{children}</h5>}
+        <div className="fix">
+        {text && <p className="card-text">{text}</p>}
+        {page && <Link to={page} className="btn btn-primary btn-card">
           Explore {children}
-        </Link>
+        </Link>}
+        </div>
       </div>
     </div>
   );

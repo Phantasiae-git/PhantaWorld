@@ -6,9 +6,12 @@ interface MediaContainerProps {
   mediaItems: Array<{
     path: string;
     type: 'image' | 'video';
-    title: string;
+    title?: string;
     note?: string;
     link?: string;
+    aspectRatio?: 'original' | 'square';
+    noShadow?: 'true';
+    smaller?: 'true'
   }>;
 }
 
@@ -18,20 +21,20 @@ const MediaContainer = ({ mediaItems }: MediaContainerProps) => {
   return (
     <div id="beige-section" className="beige-section">
       <div 
-        className='media-grid'
+        className={`media-grid ${mediaItems.length === 1? 'single-item' : ''}`}
         onMouseLeave={() => setHoveredIndex(null)}
       >
         {mediaItems.map((media, index) => (
           <div 
             key={index} 
-            className="media-item"
+            className={`${media.smaller === 'true' ? 'media-item-sml' : 'media-item'} ${media.aspectRatio === 'square' ? 'square-aspect' : ''}`}
             onMouseEnter={() => setHoveredIndex(index)}
           >
-            <div className="media-wrapper">
+            <div className={`${media.noShadow === 'true' ? 'media-wrapper-ns' : 'media-wrapper'}`}>
               {media.type === "image" ? (
                 <img 
                   src={media.path} 
-                  className="media-content"
+                  className={`media-content ${media.aspectRatio === 'square' ? 'square-content' : ''}`}
                   loading="lazy"
                   alt={`${media.title}`} 
                 />
@@ -43,18 +46,13 @@ const MediaContainer = ({ mediaItems }: MediaContainerProps) => {
                   muted
                   width="100%"
                   height="100%"
-                  className="media-content"
+                  className={`media-content ${media.aspectRatio === 'square' ? 'square-content' : ''}`}
                   onClick={media.link ? () => window.open(media.link, '_blank') : () => {}}
-                  
                 />
               )}
             </div>
-            <h5 className="media-title">{media.title}</h5>
-            {media.note && <p id="label">
-               {media.note}
-            </p>
-
-            }
+            {media.title && <h5 className="media-title">{media.title}</h5>}
+            {media.note && <p id="label">{media.note}</p>}
           </div>
         ))}
       </div>
