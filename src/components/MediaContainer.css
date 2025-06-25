@@ -57,6 +57,7 @@
   height: 100%;
   object-fit: cover;
   transition: filter 0.3s ease;
+  color: #df0202;
 }
 
 /* Square aspect ratio (1:1) */

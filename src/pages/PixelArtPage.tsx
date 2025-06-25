@@ -54,7 +54,7 @@ const PixelArtPage = () => {
         ]}
       />
     <TextSection >
-        I'm still a begginer at pixel art so I'm sticking with simple things for now, but if you'd like me to try something more elaborate,, I'm down if you're down!
+        I'm still a begginer at pixel art (yes i've done more pixel art than this but they're ugly 🧌) so I'm sticking with simple things for now, but if you'd like me to try something more elaborate,,, I'm down if you're down!
       </TextSection>
     </React.Fragment>
   )

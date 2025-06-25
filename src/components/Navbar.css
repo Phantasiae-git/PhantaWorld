@@ -83,3 +83,7 @@ nav li{
 .nav-link{
     font-size: 1.2rem !important;
 }
+
+.dropdown-item {
+  --bs-dropdown-link-active-bg: #300b0b;
+}

@@ -26,6 +26,8 @@ import MakeoversPage from "./pages/MakeoversPage";
 import AboutMePage from "./pages/AboutMePage";
 import ReviewsPage from "./pages/ReviewsPage";
 import NotFoundPage from "./pages/NotFoundPage";
+import CodePage from "./pages/CodePage";
+import ContactsPage from "./pages/ContactsPage";
 
 const router = createBrowserRouter([
   {
@@ -46,6 +48,10 @@ const router = createBrowserRouter([
         element: <ReviewsPage />,
       },
       {
+        path: "/contacts",
+        element: <ContactsPage />,
+      },
+      {
         path: "/edits",
         element: <EditsPage />,
       },
@@ -62,7 +68,7 @@ const router = createBrowserRouter([
         element: <HairDyePage />,
       },
       {
-        path: "/instaphoto",
+        path: "/photo",
         element: <PhotographyPage />,
       },
       {
@@ -80,6 +86,10 @@ const router = createBrowserRouter([
       {
         path: "/makeovers",
         element: <MakeoversPage />,
+      },
+      {
+        path: "/code",
+        element: <CodePage />,
       },
     ],
   },

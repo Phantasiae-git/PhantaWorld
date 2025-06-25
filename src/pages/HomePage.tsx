@@ -59,15 +59,17 @@ const HomePage = ({ services }: HomePageProps) => {
         itemClass="carousel-item-padding-40-px"
       >
         {services.map((service, index) => (
-          <Card
-            key={index}
-            mediaPath={service.mediaPath}
-            mediaType={service.mediaType}
-            text={service.shortDescription}
-            page={service.page}
-          >
-            {service.name}
-          </Card>
+          service.category !== "other" && (
+    <Card
+      key={index}
+      mediaPath={service.mediaPath}
+      mediaType={service.mediaType}
+      text={service.shortDescription}
+      page={service.page}
+    >
+      {service.name}
+    </Card>
+  )
         ))}
       </Carousel>
       <TextSection type="rn">

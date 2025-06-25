@@ -22,7 +22,7 @@ export const services: Array<{
     name: "Art Commissions",
     shortDescription:
       "Digital art commissions from sketch to full render. Choose between several different artstyles",
-    longDescription: "As seen on @phanta_art!",
+    longDescription: "",
     category: "art",
     mediaPath: "src/assets/images/rei.png",
     mediaType: "image",
@@ -49,19 +49,19 @@ export const services: Array<{
     page: "/hairdying",
   },
   {
-    name: "Insta-Photography",
+    name: "Photo Editing",
     shortDescription: "Post-perfect color correction for your instagram pics",
-    longDescription: "Detailed description of the photography service...",
+    longDescription: "Color correction, visuals, banners, anything that can be photoshopped will be",
     category: "photo",
-    mediaPath: "src/assets/images/je-after.jpg",
+    mediaPath: "src/assets/images/je_after.png",
     mediaType: "image",
-    page: "/instaphoto",
+    page: "/photo",
   },
   {
     name: "3D Graphics",
     shortDescription:
       "3D art commissions made in Blender, from models to animations",
-    longDescription: "Detailed description of the 3d service...",
+    longDescription: "3D modelling, architecture and environment graphics, or material transformations!",
     category: "3D",
     mediaPath: "src/assets/images/room.png",
     mediaType: "image",
@@ -71,7 +71,7 @@ export const services: Array<{
     name: "Makeovers",
     shortDescription:
       "For a special occasion or if you need some help cosplaying",
-    longDescription: "Detailed description of the makeover service...",
+    longDescription: "Wanna get ready for a big occasion? Or need some help cosplaying? You're in the right place!",
     category: "beauty",
     mediaPath: "src/assets/images/charlie1sqr.jpg",
     mediaType: "image",
@@ -91,15 +91,55 @@ export const services: Array<{
     name: "Hair Cutting",
     shortDescription:
       "Get your hair cut by someone who understands the modern trends and WILL listen to you",
-    longDescription: "Detailed description of the hair cutting service...",
+    longDescription: "Want a really specific haircut but don't trust hairdressers? This page is for you!",
     category: "hair",
     mediaPath: "src/assets/images/diogoafter2.png",
     mediaType: "image",
     page: "/haircut",
   },
+  {
+    name: "Programming",
+    shortDescription:
+      "Software commissions and programming tutoring",
+    longDescription: "Code is actually what I do academically and have done/will do for a living, so programs, apps, web development, scripts, or the knowledge to make them all are just a few of the things I have to offer, as the limits of code are non-existent (even though mine may currently not be)",
+    category: "code",
+    mediaPath: "src/assets/images/C++.png",
+    mediaType: "image",
+    page: "/code",
+  },
+    {
+    name: "About Me",
+    shortDescription:
+      "",
+    longDescription: "Who the hell is Phanta?",
+    category: "other",
+    mediaPath: "src/assets/images/rainbow_hair2.png",
+    mediaType: "image",
+    page: "/about",
+  },
+    {
+    name: "Reviews",
+    shortDescription:
+      "",
+    longDescription: "For the skepticals",
+    category: "other",
+    mediaPath: "",
+    mediaType: "image",
+    page: "/reviews",
+  },
+  {
+    name: "Contacts",
+    shortDescription:
+      "",
+    longDescription: "☎️☎️☎️",
+    category: "other",
+    mediaPath: "",
+    mediaType: "image",
+    page: "/contacts",
+  },
 ];
 
-export const catOrder = ["video", "art", "hair", "photo", "3D", "beauty"];
+export const catOrder = ["video", "art", "hair", "photo", "3D", "code", "beauty"];
 
 export const groupedServices = services.reduce((cat, service) => {
   if (!cat[service.category]) {

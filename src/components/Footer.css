@@ -1,0 +1,15 @@
+.footer {
+	width: 100vw;
+	height: 500px;
+	display: flex;
+	flex-direction: row;
+	padding: 100px 200px;
+	bottom: 0;
+}
+
+.footer-isles {
+	width: 25%;
+	height: 200px;
+	background-color: white;
+	border: 10px solid 5px white;
+}
