@@ -12,6 +12,7 @@ import { services } from "../services";
 import TextSection from "../components/TextSection";
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
+import FeaturedSevice from "../components/FeaturedSevice";
 
 interface HomePageProps {
   services: typeof services;
@@ -72,6 +73,7 @@ const HomePage = ({ services }: HomePageProps) => {
   )
         ))}
       </Carousel>
+	  <FeaturedSevice/>
       <TextSection type="rn">
       <br />
       <div className="contain">

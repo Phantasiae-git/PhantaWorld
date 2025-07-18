@@ -9,11 +9,12 @@ interface Props {
   fontstyle?:CSSProperties;
   titlestyle?:CSSProperties;
   h5?:boolean;
+  id?: string;
 }
 
-const TextSection = ({ children, title, type, style, fontstyle, titlestyle, h5 }: Props) => {
+const TextSection = ({ children, title, type, style, fontstyle, titlestyle, h5, id }: Props) => {
   return (
-    <div id="beige-section" className="beige-section" style={style}>
+    <div id={id} className="beige-section" style={style}>
         {title && !h5 && <h2 style={titlestyle}>{title}</h2>}
         {title && h5 && <h5 style={titlestyle}>{title}</h5>}
         {type === "rn" ? (

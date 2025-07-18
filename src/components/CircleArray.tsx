@@ -15,7 +15,8 @@ const CircleArray: React.FC<CirclArrayProps> = ({ items }) => {
       display: 'flex',
       flexWrap: 'wrap',
       gap: '30px',
-      alignItems: 'center'
+      alignItems: 'center',
+	  justifyContent: 'center'
     }}>
       {items.map((item, index) => (
         <div key={index} style={{

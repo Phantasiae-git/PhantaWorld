@@ -5,7 +5,7 @@ import "./TextSection.css"
 const BackgroundImageSection: React.FC = () => {
 
   const handleScrollDown = () => {
-    const section = document.getElementById("beige-section");
+    const section = document.getElementById("site-front");
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
     }
@@ -21,7 +21,7 @@ const BackgroundImageSection: React.FC = () => {
         </div>
       </div>
 
-      <div id="beige-section" className="beige-section" style={{paddingTop:'100px', paddingBottom:'70px'}}>
+      <div id="site-front" className="beige-section">
         <h2><strong>PHANTA'S</strong> EVERYTHING WEBSITE</h2>
         <p>
         All you could ever want from yours truly.

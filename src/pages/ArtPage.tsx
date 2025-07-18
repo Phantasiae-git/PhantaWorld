@@ -141,10 +141,10 @@ const ArtPage = ({ service }: { service: Service }) => {
       <div id="beige-section" className="beige-section" style={{padding:"30px 30px 0px"}}>
       <ImageList items={imageData} />
       </div>
-      <TextSection style={{padding:"50px 0px 0px", marginBottom:"-5.7rem"}} fontstyle={{fontSize:"1.3rem"}}>
+      <TextSection id="come-get">
       Now some people would call these prices "underselling myself", i call it come get yours before I change my mind 😼
       </TextSection>
-      <div id="beige-section" className="beige-section" style={{padding:"30px 100px 30px"}}>
+      <div id="sizes" className="beige-section">
       <ImageTextSection imageUrl="src/assets/images/sizes.png" content={content}/>
       <MediaContainer mediaItems={[
           {

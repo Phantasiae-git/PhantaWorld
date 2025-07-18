@@ -26,7 +26,7 @@ const ThreeDGraphicsPage = () => {
   {
     path: "src/assets/images/room.png",
     type:"image",
-    title: "Simulation of a room filled with sand",
+    title: "Isometric room with small objects",
   },
   {
     path: "src/assets/video/grease_pencil.mp4",

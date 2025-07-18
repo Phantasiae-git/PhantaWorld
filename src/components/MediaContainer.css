@@ -38,6 +38,12 @@
   max-width: 800px; /* Optional: Set a maximum width */
 }
 
+@media screen and (max-width: 800px) {
+	.media-grid.single-item .media-item {
+  width: 100%;
+}
+}
+
 /* Original aspect ratio (default) */
 .media-wrapper {
   width: 100%;
@@ -97,7 +103,7 @@
   }
   
   .media-title {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 }
 

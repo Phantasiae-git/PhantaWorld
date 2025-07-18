@@ -28,7 +28,7 @@ const Layout = ({ services }: LayoutProps) => {
       {currentService && (
         <>
           <TopSection />
-          <TextSection title={currentService.name} style={{paddingTop:'100px'}}>
+          <TextSection title={currentService.name} id="service-top">
             {currentService.longDescription}
             {currentService.name=="Art Commissions" && <p>As seen on <a href="https://www.instagram.com/phanta_art/">@phanta_art!</a></p>}
           </TextSection>

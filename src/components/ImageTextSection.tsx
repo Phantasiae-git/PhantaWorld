@@ -27,7 +27,7 @@ const ImageTextSection: React.FC<ImageTextSectionProps> = ({
       <div className="right">
         {content.map((item, index) => (
             <div key={index}>
-        <TextSection title={item.title} fontstyle={{fontSize:"1rem",  whiteSpace: 'pre-line'}} titlestyle={{fontSize:"1.4rem"}} style={{textAlign:"left", alignItems:"flex-start", padding:"10px 40px"}} h5>
+        <TextSection title={item.title} fontstyle={{fontSize:"1rem",  whiteSpace: 'pre-line'}} titlestyle={{fontSize:"1.4rem"}} id="sizes-content" h5>
             {item.content}
         </TextSection>
         </div>
